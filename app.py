@@ -15,9 +15,10 @@ def about():
 def estimate():
     return render_template('estimate.html')
 
-@app.route('/add_input', methods = ['POST'])
-def add_input():
+@app.route('/add_inputs', methods = ['GET','POST'])
+def add_inputs():
     return render_template('estimate.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
+
