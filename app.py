@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template
+from flask import Flask, request, render_template, redirect, url_for
 
 app = Flask(__name__)
 
@@ -15,9 +15,18 @@ def about():
 def estimate():
     return render_template('estimate.html')
 
-@app.route('/add_inputs', methods = ['GET','POST'])
+@app.route('/add_inputs', methods = ['POST'])
 def add_inputs():
-    return render_template('estimate.html')
+    if request.method == 'POST':
+        form = request.form
+        radius = form['radius']
+        height = form['height']
+        print(radius)
+        print(height)
+        calculate= radius + height
+        print(calculate)
+        return render_template('estimate.html', pageTitle='BPA RPA Assignment', contacts = calculate) 
+    return render_template('estimate.html', pageTitle='BPA RPA Assignment', contacts = calculate) 
 
 if __name__ == '__main__':
     app.run(debug=True)
