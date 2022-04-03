@@ -10,6 +10,7 @@ a{
     padding: 35px;
     align-items: center;
     font-size: 18;
+    text-align: center;
 }
 
 .footer {
@@ -20,4 +21,9 @@ a{
     height: 90px;
     background-color: azure;
     color: black;
+  }
+
+  h3{
+      align-content: center;
+
   }
