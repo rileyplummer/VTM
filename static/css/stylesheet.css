@@ -1,3 +1,10 @@
 body{
     background-color: azure;
 }
+
+a{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 35px;
+    align-content: center;
+    font-size: larger;
+}
