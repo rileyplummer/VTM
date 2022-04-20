@@ -51,4 +51,4 @@ def test_add_inputs_route(app,client):
     """
     with app.test_client() as test_client:
         res = test_client.post('/add_inputs')
-        assert res.status_code == 200
+        assert res.status_code == 400
