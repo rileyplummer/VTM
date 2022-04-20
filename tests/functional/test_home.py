@@ -33,21 +33,22 @@ def test_estimate_route(app,client):
         assert b"Create An Estimate" in res.data
 
 def test_add_inputs_route(app,client):
-      """
+    """
     GIVEN a Flask application configured for testing
-    WHEN the '/add_inputs' route is requested (GET)
-    THEN check that the response is valid/a number appears
+    WHEN the '/estimate' route is requested (GET)
+    THEN check that the response is valid
     """
     with app.test_client() as test_client:
         res = test_client.get('/add_inputs')
-        assert rest.status_code == 200
+        assert res.status_code == 200
+
 
 def test_add_inputs_route(app,client):
-      """
+    """
     GIVEN a Flask application configured for testing
-    WHEN the '/add_inputs' route is requested (GET)
-    THEN check that the response is valid/a number appears
+    WHEN the '/estimate' route is requested (GET)
+    THEN check that the response is valid
     """
     with app.test_client() as test_client:
         res = test_client.post('/add_inputs')
-        assert rest.status_code == 200
+        assert res.status_code == 200
