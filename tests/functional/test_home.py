@@ -6,7 +6,7 @@ def test_index_route(app,client):
     """
     with app.test_client() as test_client:
         res = test_client.get('/')
-        assert res.status code == 200
+        assert res.status_code == 200
         assert b'Vertical Tank Maintenance' in res.data
 
 def test_about_route(app,client):
