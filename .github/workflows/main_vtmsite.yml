@@ -4,7 +4,7 @@
 #test
 
 name: Build and deploy Python app to Azure Web App - VtmSite
-
+ 
 on:
   push:
     branches:
